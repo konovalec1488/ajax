@@ -12,6 +12,9 @@
                 margin: 10px;
                 padding: 5px;
             }
+            #getUsers{
+                margin: 10px 0;
+            }
         </style>
     </head>
     <body>
@@ -26,6 +29,9 @@
             <input type="password" id="pass2" placeholder="Pass confirm">
             <input type="submit">
         </form>
+        
+        <input id="getUsers" type="button" value="Пользователи">
+        <div id="users"></div>
     </body>
 </html>
 
