@@ -3,11 +3,13 @@ window.onload = function () {
         getData();
     };
     document.getElementById('getUsers').onclick = function () {
-        var users_db = 'Пользователи: ';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                document.getElementById('users').textContent = users_db;
+                var data = xhr.responseText;
+                var logins = JSON.parse(data);
+                console.log(logins);
+                document.getElementById('users').textContent = 'users_db';
             }
         };
         xhr.open('POST', 'api/users.php');
