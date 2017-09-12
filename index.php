@@ -15,6 +15,11 @@
             #getUsers{
                 margin: 10px 0;
             }
+            #users p{
+                margin: 10px 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
         </style>
     </head>
     <body>

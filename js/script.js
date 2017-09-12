@@ -8,8 +8,12 @@ window.onload = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var data = xhr.responseText;
                 var logins = JSON.parse(data);
-                console.log(logins);
-                document.getElementById('users').textContent = 'users_db';
+                var login_str='';
+                for (var i = 0; i < logins.length; i++) {
+                    login_str+= "<p>"+logins[i]+"</p>";
+                }
+                //console.log(logins);
+                document.getElementById('users').innerHTML = login_str;
             }
         };
         xhr.open('POST', 'api/users.php');
