@@ -15,7 +15,7 @@
             #getUsers{
                 margin: 10px 0;
             }
-            #users p{
+            #users li{
                 margin: 10px 15px;
                 font-weight: bold;
                 text-transform: uppercase;

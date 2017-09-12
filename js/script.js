@@ -10,10 +10,10 @@ window.onload = function () {
                 var logins = JSON.parse(data);
                 var login_str='';
                 for (var i = 0; i < logins.length; i++) {
-                    login_str+= "<p>"+logins[i]+"</p>";
+                    login_str+= "<li>"+logins[i]+"</li>";
                 }
                 //console.log(logins);
-                document.getElementById('users').innerHTML = login_str;
+                document.getElementById('users').innerHTML = "<ul>"+login_str+"</ul>";
             }
         };
         xhr.open('POST', 'api/users.php');
